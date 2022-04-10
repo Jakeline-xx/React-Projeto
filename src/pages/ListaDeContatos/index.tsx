@@ -29,6 +29,12 @@ export function ListaDeContatos() {
     setContato(fakeContatos);
   }
 
+  async function deleteContato(id: number) {
+    const response = await fakeApi.delete(`contatos/${id}`);
+    const fakeContatos = response.data;
+    setContato((previousState) => [...previousState.filter((x) => x.id != id)]);
+  }
+
   useEffect(() => {
     getContatos();
   }, []);
@@ -69,7 +75,7 @@ export function ListaDeContatos() {
                 </ListItemIcon>
               </Link>
               <ListItemIcon>
-                <IconButton>
+                <IconButton onClick={() => deleteContato(contato.id)}>
                   <DeleteIcon />
                 </IconButton>
               </ListItemIcon>

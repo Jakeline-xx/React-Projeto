@@ -7,6 +7,7 @@ import { TextField, Box, Button, Typography } from "@mui/material";
 import { Contato } from "../ListaDeContatos";
 import { useState } from "react";
 import "@fontsource/roboto/500.css";
+
 type CriarContato = {
   id?: number;
   nome: string;
@@ -42,6 +43,9 @@ export function NovoContato() {
     setContatos((previousState) => [...previousState, fakeContatos]);
     setContatoNomeInput("");
     setContatoTelefoneInput("");
+    {
+      window.location.href = "/";
+    }
   }
 
   return (

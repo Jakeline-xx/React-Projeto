@@ -13,9 +13,9 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { Fab } from "@mui/material";
 import GroupAddOutlinedIcon from "@mui/icons-material/GroupAddOutlined";
 
-type Contato = {
+export type Contato = {
   id: number;
-  name: string;
+  nome: string;
   telefone: string;
 };
 
@@ -58,7 +58,7 @@ export function ListaDeContatos() {
                 <Avatar src="image" />
               </ListItemAvatar>
               <ListItemText
-                primary={contato.name}
+                primary={contato.nome}
                 secondary={contato.telefone}
               />
               <Link to="editar/">

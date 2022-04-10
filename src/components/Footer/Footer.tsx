@@ -1,13 +1,13 @@
 import "./styles.css";
 import ArrowBackSharpIcon from "@mui/icons-material/ArrowBackSharp";
 import CropSquareTwoToneIcon from "@mui/icons-material/CropSquareTwoTone";
-import AdjustOutlinedIcon from "@mui/icons-material/AdjustOutlined";
+import AdjustSharpIcon from "@mui/icons-material/AdjustSharp";
 
 export function Footer() {
   return (
     <footer className="footer">
       <ArrowBackSharpIcon />
-      <AdjustOutlinedIcon />
+      <AdjustSharpIcon />
       <CropSquareTwoToneIcon />
     </footer>
   );

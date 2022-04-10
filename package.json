@@ -9,6 +9,9 @@
     "fake-server": "json-server --port 8000 --watch contatos-data.json"
   },
   "dependencies": {
+    "@fontsource/roboto": "^4.5.5",
+    "@mui/icons-material": "^5.6.0",
+    "@mui/lab": "^5.0.0-alpha.76",
     "axios": "^0.26.1",
     "json-server": "^0.17.0",
     "react": "^17.0.2",

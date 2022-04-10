@@ -1,3 +1,24 @@
 a {
   text-decoration: none;
 }
+.flex-form {
+  display: flex;
+  flex-direction: column;
+}
+.flex-form-input {
+  margin-top: 2vh;
+}
+.flex-form button {
+  margin-top: 5vh;
+}
+.form-icon {
+  height: 10vh;
+  width: 10vh;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 3vh 0;
+  align-items: center;
+  flex-direction: column;
+}

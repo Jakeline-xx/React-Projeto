@@ -30,9 +30,13 @@ export function ListaDeContatos() {
   }
 
   async function deleteContato(id: number) {
-    const response = await fakeApi.delete(`contatos/${id}`);
-    const fakeContatos = response.data;
-    setContato((previousState) => [...previousState.filter((x) => x.id != id)]);
+    if (window.confirm("Tem certeza que deseja exluir essse contato?")) {
+      const response = await fakeApi.delete(`contatos/${id}`);
+      const fakeContatos = response.data;
+      setContato((previousState) => [
+        ...previousState.filter((x) => x.id != id),
+      ]);
+    }
   }
 
   useEffect(() => {

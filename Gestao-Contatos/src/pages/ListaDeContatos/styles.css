@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 50vh;
+  background-color: rgb(238, 231, 231);
+  padding: 5vh;
+}
+
+#novo-contato-btn {
+  padding-left: 2vh;
+}

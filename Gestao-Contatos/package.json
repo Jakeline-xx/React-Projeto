@@ -6,12 +6,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "fake-server": "json-server --port 3333 --watch contatos-data.json"
+    "fake-server": "json-server --port 8000 --watch contatos-data.json"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/material": "^5.6.0",
     "axios": "^0.26.1",
     "json-server": "^0.17.0",
     "react": "^17.0.2",

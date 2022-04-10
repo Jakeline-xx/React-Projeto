@@ -1,11 +1,12 @@
 import "./styles.css";
 import { Link } from "react-router-dom";
+import { fakeApi } from "../../services/fakeApi";
 
 export function EditarContato() {
   return (
-    <div>
-      <Link to="/detalhes">x pra voltar</Link>
-      <h1>Editar Contato</h1>
+    <div className="container">
+      <Link to="/">x</Link>
+      <h2>Editar Contato</h2>
     </div>
   );
 }

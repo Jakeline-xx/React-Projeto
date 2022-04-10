@@ -21,9 +21,6 @@ type Contato = {
 
 export function ListaDeContatos() {
   const [contatos, setContato] = useState<Contato[]>([]);
-  // const [nomeContato, setNomeContato] = useState("");
-  // const [numeroContato, setNumeroContato] = useState("");
-
   async function getContatos() {
     const response = await fakeApi.get("contatos");
 
@@ -39,33 +36,47 @@ export function ListaDeContatos() {
   return (
     <div className="container">
       <Link to="novo">
-        <Fab variant="extended" size="small" aria-label="add">
-          <GroupAddOutlinedIcon />
-          <p id="novo-contato-btn">Criar novo contato</p>
-        </Fab>
+        <div className="novo-contato-btn">
+          <Fab
+            variant="extended"
+            size="medium"
+            color="default"
+            aria-label="add"
+          >
+            <div className="novo-contato-btn-txt">
+              <GroupAddOutlinedIcon />
+              <p id="texto-criar">Criar novo contato</p>
+            </div>
+          </Fab>
+        </div>
       </Link>
-      {contatos.map((contato) => (
-        <div>
-          <ListItem>
-            <ListItemAvatar>
-              <Avatar src="image" />
-            </ListItemAvatar>
-            <ListItemText primary={contato.name} secondary={contato.telefone} />
-            <Link to="editar/">
+      <div className="lista-contatos">
+        {contatos.map((contato) => (
+          <div key={contato.id}>
+            <ListItem>
+              <ListItemAvatar>
+                <Avatar src="image" />
+              </ListItemAvatar>
+              <ListItemText
+                primary={contato.name}
+                secondary={contato.telefone}
+              />
+              <Link to="editar/">
+                <ListItemIcon>
+                  <IconButton>
+                    <EditIcon />
+                  </IconButton>
+                </ListItemIcon>
+              </Link>
               <ListItemIcon>
                 <IconButton>
-                  <EditIcon />
+                  <DeleteIcon />
                 </IconButton>
               </ListItemIcon>
-            </Link>
-            <ListItemIcon>
-              <IconButton>
-                <DeleteIcon />
-              </IconButton>
-            </ListItemIcon>
-          </ListItem>
-        </div>
-      ))}
+            </ListItem>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  margin: 0 65vh;
+  padding: 1vh 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(102, 98, 98);
+}

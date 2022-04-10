@@ -1,15 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.novo-contato-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.container {
-  margin: 0 50vh;
-  background-color: rgb(238, 231, 231);
-  padding: 5vh;
+.novo-contato-btn-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vh;
 }
-
-#novo-contato-btn {
-  padding-left: 2vh;
+.lista-contatos {
+  margin-top: 5vh;
+}
+#texto-criar {
+  margin-left: 2vh;
 }

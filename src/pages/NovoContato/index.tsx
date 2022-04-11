@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import "./styles.css";
-import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn";
+import { Contato } from "../../components/Type/Type";
 import { fakeApi } from "../../services/fakeApi";
-import Avatar from "@mui/material/Avatar";
-import { TextField, Box, Button, Typography } from "@mui/material";
-import { Contato } from "../ListaDeContatos";
 import { useState } from "react";
+
+import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn";
+import { TextField, Box, Button, Typography, Avatar } from "@mui/material";
 import "@fontsource/roboto/500.css";
 
 type CriarContato = {

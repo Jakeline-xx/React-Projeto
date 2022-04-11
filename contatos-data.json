@@ -7,11 +7,6 @@
     },
     {
       "nome": "Maria",
-      "telefone": "11113213",
-      "id": 8
-    },
-    {
-      "nome": "Maria",
       "telefone": "44 3333-3333",
       "id": 9
     },
@@ -31,9 +26,19 @@
       "id": 12
     },
     {
-      "nome": "Pedro Bo",
+      "nome": "Pedro ",
       "telefone": "11 4444-5555",
       "id": 13
+    },
+    {
+      "nome": "Julia",
+      "telefone": "+55 11 93333-3333",
+      "id": 14
+    },
+    {
+      "nome": "Alice",
+      "telefone": "4444",
+      "id": 15
     }
   ]
 }

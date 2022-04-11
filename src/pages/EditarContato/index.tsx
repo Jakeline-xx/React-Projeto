@@ -1,18 +1,12 @@
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./styles.css";
-import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn";
+import { Contato } from "../../components/Type/Type";
 import { fakeApi } from "../../services/fakeApi";
-import Avatar from "@mui/material/Avatar";
-import { TextField, Box, Button, Typography } from "@mui/material";
-import { Contato } from "../ListaDeContatos";
 import { useEffect, useState } from "react";
-import "@fontsource/roboto/500.css";
 
-type EditarContato = {
-  id: number;
-  nome: string;
-  telefone: string;
-};
+import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn";
+import { TextField, Box, Button, Typography, Avatar } from "@mui/material";
+import "@fontsource/roboto/500.css";
 
 export function EditarContato() {
   const [contatos, setContato] = useState<Contato[]>([]);
@@ -36,7 +30,7 @@ export function EditarContato() {
 
   async function editarContato(id: any) {
     if (window.confirm("Tem certeza que deseja alterar as informações?")) {
-      const data: EditarContato = {
+      const data: Contato = {
         nome: contatoNomeInput,
         telefone: contatoTelefoneInput,
         id: Number(contatoIdInput),
@@ -51,9 +45,11 @@ export function EditarContato() {
         return;
       }
 
-      await fakeApi.put(`contatos/${id}`, data).then(() => {
+      await fakeApi.put(`contatos/${id}`, data);
+
+      {
         window.location.href = "/";
-      });
+      }
     }
   }
 

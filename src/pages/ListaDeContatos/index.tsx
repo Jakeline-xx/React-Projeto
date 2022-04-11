@@ -2,22 +2,20 @@ import "./styles.css";
 import { Link } from "react-router-dom";
 import { fakeApi } from "../../services/fakeApi";
 import { useEffect, useState } from "react";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
-import ListItemText from "@mui/material/ListItemText";
-import Avatar from "@mui/material/Avatar";
-import IconButton from "@mui/material/IconButton";
+import { Contato } from "../../components/Type/Type";
+
+import GroupAddOutlinedIcon from "@mui/icons-material/GroupAddOutlined";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { Fab } from "@mui/material";
-import GroupAddOutlinedIcon from "@mui/icons-material/GroupAddOutlined";
-
-export type Contato = {
-  id: number;
-  nome: string;
-  telefone: string;
-};
+import {
+  Fab,
+  ListItem,
+  ListItemIcon,
+  ListItemAvatar,
+  ListItemText,
+  Avatar,
+  IconButton,
+} from "@mui/material";
 
 export function ListaDeContatos() {
   const [contatos, setContato] = useState<Contato[]>([]);

@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<ListaDeContatos />} />
-        <Route path="editar" element={<EditarContato />} />
+        <Route path="editar/:id" element={<EditarContato />} />
         <Route path="novo" element={<NovoContato />} />
       </Routes>
       <Footer />

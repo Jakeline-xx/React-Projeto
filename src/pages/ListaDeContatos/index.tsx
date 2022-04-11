@@ -71,7 +71,7 @@ export function ListaDeContatos() {
                 primary={contato.nome}
                 secondary={contato.telefone}
               />
-              <Link to="editar/">
+              <Link to={`editar/${contato.id}`}>
                 <ListItemIcon>
                   <IconButton>
                     <EditIcon />
